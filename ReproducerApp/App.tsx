@@ -1,28 +1,55 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import React, { useCallback, useEffect } from 'react';
+import {
+  NativeModules,
+  Text,
+  TouchableOpacity,
+  TurboModuleRegistry,
+  View,
+} from 'react-native';
+// import {GestureHandlerRootView} from 'react-native-gesture-handler';
+const ConnectNativeModule = NativeModules.ConnectNativeModule;
+// const ConnectNativeModule = TurboModuleRegistry.getEnforcing(
+//   'ConnectNativeModule',
+// );
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    return () => {};
+  }, []);
+
+  console.log('ConnectNativeModule', ConnectNativeModule);
+
+  console.log(
+    'NativeModules.PlatformConstants',
+    { NativeModules: NativeModules.PlatformConstants },
+    TurboModuleRegistry.getEnforcing('PlatformConstants'),
+  );
+
+  const goToNextApp = useCallback(async () => {
+    try {
+      ConnectNativeModule?.openApp(
+        'MiniAppAppRN',
+        '/data/user/0/com.supperappapprn/files/index.android-1.bundle',
+        {},
+        true,
+        () => {},
+      );
+      const result = await ConnectNativeModule?.getBundleNames();
+      console.log('goToNextApp result', result);
+    } catch (error) {
+      console.log('error', error);
+    }
+  }, []);
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+    // <GestureHandlerRootView>
+    <View>
+      <TouchableOpacity onPress={goToNextApp}>
+        <Text>goToNextApp</Text>
+      </TouchableOpacity>
     </View>
+    // </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

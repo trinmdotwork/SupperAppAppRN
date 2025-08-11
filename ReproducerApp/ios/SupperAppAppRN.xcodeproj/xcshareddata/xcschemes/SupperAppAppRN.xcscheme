@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ReproducerApp.app"
-               BlueprintName = "ReproducerApp"
-               ReferencedContainer = "container:ReproducerApp.xcodeproj">
+               BuildableName = "SupperAppAppRN.app"
+               BlueprintName = "SupperAppAppRN"
+               ReferencedContainer = "container:SupperAppAppRN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReproducerAppTests.xctest"
-               BlueprintName = "ReproducerAppTests"
-               ReferencedContainer = "container:ReproducerApp.xcodeproj">
+               BuildableName = "SupperAppAppRNTests.xctest"
+               BlueprintName = "SupperAppAppRNTests"
+               ReferencedContainer = "container:SupperAppAppRN.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReproducerApp.app"
-            BlueprintName = "ReproducerApp"
-            ReferencedContainer = "container:ReproducerApp.xcodeproj">
+            BuildableName = "SupperAppAppRN.app"
+            BlueprintName = "SupperAppAppRN"
+            ReferencedContainer = "container:SupperAppAppRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReproducerApp.app"
-            BlueprintName = "ReproducerApp"
-            ReferencedContainer = "container:ReproducerApp.xcodeproj">
+            BuildableName = "SupperAppAppRN.app"
+            BlueprintName = "SupperAppAppRN"
+            ReferencedContainer = "container:SupperAppAppRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
