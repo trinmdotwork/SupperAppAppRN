@@ -29,7 +29,7 @@ function App() {
     try {
       ConnectNativeModule?.openApp(
         'MiniAppAppRN',
-        '/data/user/0/com.supperappapprn/files/index.android-1.bundle',
+        'index.android-1.bundle',
         {},
         true,
         () => {},
